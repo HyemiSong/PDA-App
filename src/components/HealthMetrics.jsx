@@ -14,11 +14,6 @@ export default class HealthMetrics extends Component {
                     <div className='l-apple-box-multiple'></div>  
                 </div>
                 <div className='border-bottom'>
-                    Work hours
-                    <div className='l-apple-box-multiple'></div>   
-                    <div className='l-apple-box-multiple'></div>  
-                </div>
-                <div className='border-bottom'>
                     Sleep hours
                     <div className='l-apple-box-multiple'></div>  
                     <div className='l-apple-box-multiple'></div>   

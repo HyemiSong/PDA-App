@@ -4,7 +4,9 @@ function mapReduxStateToReactProps(state){
     return {
         isPopUp: state.isPopUp,
         isRecommend: state.isRecommend,
-        isReport: state.isReport
+        isReport: state.isReport,
+        placeholder: state.placeholder,
+        reports: state.reports
     }
 }
 function mapDispatchToProps(dispatch){
@@ -17,6 +19,9 @@ function mapDispatchToProps(dispatch){
         },
         onOpenRep:function(e){
             dispatch({type:'REPORT', onOpenRep:e})
+        },
+        onSubmitReport:function(e){
+            dispatch({type:'SUBMITREPORT', onSubmitRep:e})
         }
     }
 }

@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import PopUpRoot from "./PopUpRoot";
 import BreathingExRoot from "./BreathingExRoot";
-import ReportRoot from "./ReportRoot"; 
+import ReportRoot from "./ReportRoot";
+import RecommendRoot from "./RecommendRoot"
 
 export default class Modals extends Component {
-    Modal(){
+    Popup(){
         const{ isPopUp } = this.props;
         let manageModal = null;
          if(isPopUp === false){
@@ -24,6 +25,16 @@ export default class Modals extends Component {
          }
          return manageModal
      }
+     RecommendLists(){
+        const{ isRecommendLists } = this.props;
+        let manageModal = null;
+         if(isRecommendLists === false){
+            manageModal = null;
+         }else if(isRecommendLists === true){
+            manageModal = <RecommendRoot/>
+         }
+         return manageModal
+   }
      Report(){
         const{ isReport } = this.props;
         let manageModal = null;
@@ -37,9 +48,10 @@ export default class Modals extends Component {
     render(){
         return (
             <div>
-                {this.Modal()}
+                {this.Popup()}
                 {this.Recommend()}
                 {this.Report()}
+                {this.RecommendLists()}
             </div>
         )
     }

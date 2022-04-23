@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import StressLevel from '../containers/StressLevel';
-export default class TopMid extends Component {
+export default class StressLevelRoot extends Component {
     render(){
         return (
             <div className='border-right border-left'>

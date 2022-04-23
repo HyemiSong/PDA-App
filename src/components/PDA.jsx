@@ -6,11 +6,14 @@ import MenuRoot from "./MenuRoot";
 import HealthMetricsRoot from "./HealthMetricsRoot";
 import ModalsRoot from "./ModalsRoot";
 
+import TimerRoot from "./TimerRoot";
+
 import React, {Component} from 'react';
 export default class PDA extends Component {
     render(){
       return (
         <div>
+            <TimerRoot />
             <div className="absolute centering-all z-index-zero">
                 <ModalsRoot />
             </div>

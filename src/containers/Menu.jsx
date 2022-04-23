@@ -1,10 +1,11 @@
-import News from '../components/Menu';
+import Menu from '../components/Menu';
 import {connect} from 'react-redux';
 function mapReduxStateToReactProps(state){
     return {
         isPopUp: state.isPopUp,
         isRecommend: state.isRecommend,
-        isReport: state.isReport
+        isReport: state.isReport,
+        isRecommendLists: state.isRecommendLists
     }
 }
 function mapDispatchToProps(dispatch){
@@ -17,7 +18,10 @@ function mapDispatchToProps(dispatch){
         },
         onOpenRep:function(e){
             dispatch({type:'REPORT', onOpenRep:e})
+        },
+        onOpenRecLists:function(e){
+            dispatch({type:'RECOMMENDLISTS', onOpenRecLists:e})
         }
     }
 }
-export default connect(mapReduxStateToReactProps, mapDispatchToProps)(News);
+export default connect(mapReduxStateToReactProps, mapDispatchToProps)(Menu);
