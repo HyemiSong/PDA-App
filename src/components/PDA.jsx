@@ -14,19 +14,21 @@ export default class PDA extends Component {
       return (
         <div>
             <TimerRoot />
-            <div className="absolute centering-all z-index-zero">
+            <div>
                 <ModalsRoot />
             </div>
-            <div className="flex">
-                <div className="c-19 displayNone"><TopLeft/></div>
-                <div className="c-62"><TopMid/></div>
-                <div className="c-19 displayNone"><TopRight/></div>
-            </div>
-            <div className="flex">
-                <div className="c-100"><MenuRoot/></div>
-            </div>
-            <div className="flex ">
-            <div className="c-100"><HealthMetricsRoot/></div>
+            <div className="z-index-zero">
+                <div className="flex">
+                    <div className="c-19 displayNone"><TopLeft/></div>
+                    <div className="c-62"><TopMid/></div>
+                    <div className="c-19 displayNone"><TopRight/></div>
+                </div>
+                <div className="flex">
+                    <div className="c-100"><MenuRoot/></div>
+                </div>
+                <div className="flex ">
+                <div className="c-100"><HealthMetricsRoot/></div>
+                </div>
             </div>
         </div>
       )

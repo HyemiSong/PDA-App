@@ -2,6 +2,8 @@ import Recommend from '../components/Recommend';
 import {connect} from 'react-redux';
 function mapReduxStateToReactProps(state){
     return {
+        reports: state.reports,
+        treatments: state.treatments,
         isRecommendLists: state.isRecommendLists
     }
 }

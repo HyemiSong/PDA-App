@@ -29,29 +29,76 @@ export default class Report extends Component {
                     this.props.onSubmitReport(newReports);
                 }.bind(this)}>
          
-                <div className='bg-white detailBg z-index-zero'>
-                    <div>
-                        Manual Report
-                    </div>
-                    <input type="button" value="Close"
-                        onClick={function(){
-                        let _recommend = false;
-                        this.props.onOpenRep(_recommend)
-                    }.bind(this)}></input>
-
-                    <div className="sub-inner-section padding-top-xsm">
-                        <div className="font-size-12 text-grey">
-                            Memo
+                <div className='bg-white detailBg title border-bottom'>
+                    <div className='flex centring-all padding-sm'>
+                        <div className='title t-med t-23'>
+                           My profile
                         </div>
-                        <div className="font-size-14">
-                            <input className="defaultButton" type="text" name="title" value={this.state.newReport} onChange={function(e){
-                                this.setState({newReport: e.target.value})
+                        <div className='fixed right-0 margin-right-ssm'>
+                            <input type="button" value="Close"
+                                onClick={function(){
+                                let _recommend = false;
+                                this.props.onOpenRep(_recommend)
                             }.bind(this)}></input>
                         </div>
                     </div>
-                    <input type="submit" value="Apply" className="primaryButton"/>
-                    <div>
-                        {this.display()}
+                    <div className='padding-sm'>
+                        <div className="sub-inner-section">
+                            <div className="font-size-12 text-grey">
+                                My current feeling...
+                            </div>
+                            <div className='flex'>
+                                <div className="font-size-14 padding-sm centering">
+                                    <input type="button" value="Very Sad" className="margin-right-ssm"
+                                        onClick={function(){
+                                    }.bind(this)}></input>
+                                    <input type="button" value="Sad" className="margin-right-ssm"
+                                        onClick={function(){
+                                    }.bind(this)}></input>
+                                    <input type="button" value="Normal" className="margin-right-ssm"
+                                        onClick={function(){
+                                    }.bind(this)}></input>
+                                    <input type="button" value="Good" className="margin-right-ssm"
+                                        onClick={function(){
+                                    }.bind(this)}></input>
+                                    <input type="button" value="Very good"
+                                        onClick={function(){
+                                    }.bind(this)}></input>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <div className='padding-sm'>
+                        <div className="sub-inner-section">
+                            <div className="font-size-12 text-grey">
+                                Treatments that I discovered...
+                            </div>
+                            <div className="font-size-14">
+                            </div>
+                        </div>
+                    </div> */}
+                    <div className="sub-inner-section padding-sm">
+                        <div className="font-size-12 text-grey">
+                            Quick updates: my medical info.
+                        </div>
+                        <div className="flex padding-sm">
+                            <div className="font-size-14 margin-right-ssm">
+                                <input className="defaultButton" type="text" name="title" value={this.state.newReport} onChange={function(e){
+                                    this.setState({newReport: e.target.value})
+                                }.bind(this)}></input>
+                            </div>
+                            <div>
+                            <input type="submit" value="Save" className="primaryButton"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='padding-sm'>
+                        <div className="font-size-12 text-grey">
+                            Updated medical info.
+                        </div>
+                        <div className="padding-sm">
+                            {this.display()}
+                        </div>
                     </div>
                 </div>
                 </form>

@@ -11,7 +11,15 @@ export default createStore(function(state, action){
             reports:[{id:1, title:"My heartbeat suddenly increased without reasons today."}],
             timer: 0,
             isRecommendLists:false,
-            recommendAll:[{id:1, title:"breathing"},{id:1, title:"going out"}]
+            treatments:
+            [{id:1, title:"15mins breathing exercise"},
+             {id:2, title:"Going out for a walk"},
+             {id:3, title:"Canceling meetings until tommorrow"},
+             {id:4, title:"Attending an online Yoga class"},
+             {id:5, title:"Dringing favorite tea"},
+             {id:6, title:"Singing a favorite song"},
+             {id:7, title:"Going to a gym"}
+            ]
         }
     }
     if(action.type === 'POPUP'){

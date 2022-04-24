@@ -3,7 +3,10 @@ import {connect} from 'react-redux';
 function mapReduxStateToReactProps(state){
     return {
         isPopUp: state.isPopUp,
-        isBreathing: state.isBreathing
+        isRecommend: state.isRecommend,
+        isReport: state.isReport,
+        placeholder: state.placeholder,
+        reports: state.reports
     }
 }
 function mapDispatchToProps(dispatch){

@@ -48,10 +48,10 @@ export default class Modals extends Component {
     render(){
         return (
             <div>
-                {this.Popup()}
-                {this.Recommend()}
-                {this.Report()}
-                {this.RecommendLists()}
+               <div className="z-index-three absolute centering-all">{this.Popup()}</div>
+               <div className="z-index-two absolute">{this.Recommend()}</div>
+               <div className="z-index-two absolute">{this.Report()}</div>
+               <div className="z-index-two absolute">{this.RecommendLists()}</div>
             </div>
         )
     }
