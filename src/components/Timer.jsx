@@ -9,9 +9,9 @@ useEffect(() => {
     const countdown = setInterval(() => {
         let count = timer + 1;
         let popup;
-        if(count === 2 || count === 5){
+        if(count === 2 || count === 15 || count === 20){
             popup = _ispopUp ? false : true;
-        }else if(count !==2  && count !==5){
+        }else if(count !==2  && count !==15 && count !==20){
             popup = _ispopUp ? true : false;
         }else{
             popup = currentIsPopUp;

@@ -7,6 +7,7 @@ import HealthMetricsRoot from "./HealthMetricsRoot";
 import ModalsRoot from "./ModalsRoot";
 
 import TimerRoot from "./TimerRoot";
+import ServerRoot from "./ServerRoot";
 
 import React, {Component} from 'react';
 export default class PDA extends Component {
@@ -14,6 +15,7 @@ export default class PDA extends Component {
       return (
         <div>
             <TimerRoot />
+            <ServerRoot />
             <div>
                 <ModalsRoot />
             </div>

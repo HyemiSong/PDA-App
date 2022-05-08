@@ -5,7 +5,7 @@ export default class PopUp extends Component {
             <div>
                 <div className='bg-white dropshadow padding-sm'>
                     <div className='centering t-med t-21 padding-sm'>Stress level has reached L4 from L3</div>
-                    <div>You need rest. Follows treatment and goes back home to rest.</div>
+                    <div>Stress Level is too high. Follow this treatment for breathing ex. and goes back home to rest.</div>
 
                         <div className='flex centering padding-sm'>
                             <input type="button" value="Learn more" className='margin-right-ssm'

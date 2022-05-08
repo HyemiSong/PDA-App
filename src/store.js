@@ -4,6 +4,7 @@ export default createStore(function(state, action){
     console.log(state, action)
     if(state === undefined){
         return {
+            serverData: [],
             isPopUp:false,
             isRecommend:false,
             isReport:false,
@@ -39,6 +40,9 @@ export default createStore(function(state, action){
     }
     if(action.type === 'RECOMMENDLISTS'){
         return {...state, isRecommendLists:action.onOpenRecLists}
+    }
+    if(action.type === 'SERVERDATA'){
+        return {...state, serverData:action.onServerData}
     }
     return state;
 }, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
