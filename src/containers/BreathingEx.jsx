@@ -6,7 +6,8 @@ function mapReduxStateToReactProps(state){
         isRecommend: state.isRecommend,
         isReport: state.isReport,
         placeholder: state.placeholder,
-        reports: state.reports
+        reports: state.reports,
+        serverData: state.serverData
     }
 }
 function mapDispatchToProps(dispatch){

@@ -28,8 +28,8 @@ export default class Report extends Component {
                     newReports.push({id:this.props.reports.length+1, title:this.state.newReport});
                     this.props.onSubmitReport(newReports);
                 }.bind(this)}>
-         
-                <div className='bg-white detailBg title border-bottom'>
+
+                <div className='bg-white borderCorners-in title border-bottom canvas absolute'>
                     <div className='flex centring-all padding-sm'>
                         <div className='title t-med t-23'>
                            My profile
@@ -49,19 +49,19 @@ export default class Report extends Component {
                             </div>
                             <div className='flex'>
                                 <div className="font-size-14 padding-sm centering">
-                                    <input type="button" value="Very Sad" className="margin-right-ssm"
+                                    {/* <input type="button" value="Very Sad" className="margin-right-ssm"
                                         onClick={function(){
-                                    }.bind(this)}></input>
+                                    }.bind(this)}></input> */}
                                     <input type="button" value="Sad" className="margin-right-ssm"
                                         onClick={function(){
                                     }.bind(this)}></input>
-                                    <input type="button" value="Normal" className="margin-right-ssm"
+                                    <input type="button" value="Gloomy" className="margin-right-ssm"
                                         onClick={function(){
                                     }.bind(this)}></input>
                                     <input type="button" value="Good" className="margin-right-ssm"
                                         onClick={function(){
                                     }.bind(this)}></input>
-                                    <input type="button" value="Very good"
+                                    <input type="button" value="Happy"
                                         onClick={function(){
                                     }.bind(this)}></input>
                             </div>

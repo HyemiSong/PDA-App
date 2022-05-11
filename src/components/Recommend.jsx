@@ -37,7 +37,7 @@ export default class Recommend extends Component {
                     this.props.onSubmitReport(newReports);
                 }.bind(this)}>
          
-                <div className='bg-white detailBg title border-bottom'>
+                <div className='bg-white borderCorners-in title border-bottom canvas absolute'>
                     <div className='flex centring-all padding-sm'>
                         <div className='title t-med t-23'>
                            All Treatments

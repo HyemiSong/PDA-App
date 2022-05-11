@@ -4,14 +4,15 @@ export default createStore(function(state, action){
     console.log(state, action)
     if(state === undefined){
         return {
-            serverData: [],
-            isPopUp:false,
-            isRecommend:false,
-            isReport:false,
-            placeholder:"Write memo",
-            reports:[{id:1, title:"My heartbeat suddenly increased without reasons today."}],
+            serverData: [{"calendar":"meeting","currentStressLevel":0,"heartRate":0,"id":0,"location":"work","previousStressLevel":0,"sleepHours":0,"treatment":{"summary":"summary","title":"title","url":"https://media.wired.com/photos/5b8999943667562d3024c321/master/w_120,c_limit/trash2-01.jpg"}}],
+            isStressUp: false,
+            isPopUp: false,
+            isRecommend: false,
+            isReport: false,
+            placeholder: "Write memo",
+            reports: [{id:1, title:"My heartbeat suddenly increased without reasons today."}],
             timer: 0,
-            isRecommendLists:false,
+            isRecommendLists: false,
             treatments:
             [{id:1, title:"15mins breathing exercise"},
              {id:2, title:"Going out for a walk"},
@@ -19,8 +20,7 @@ export default createStore(function(state, action){
              {id:4, title:"Attending an online Yoga class"},
              {id:5, title:"Dringing favorite tea"},
              {id:6, title:"Singing a favorite song"},
-             {id:7, title:"Going to a gym"}
-            ]
+             {id:7, title:"Going to a gym"}]
         }
     }
     if(action.type === 'POPUP'){

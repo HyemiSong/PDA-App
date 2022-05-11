@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 export default class Menu extends Component {
     render(){
         return (
-            <div className='relative t-14 z-index-three'>
-                <div className="marquee padding-sm">
+            <div className='t-14 z-index-three'>
+                <div className="marquee padding-sm borderCorners-bottom">
                     <ul className="flex centering">
-                        <li className="margin-right-md">
+                        <li className="margin-right-ssm margin-left-ssm">
                         <input type="button" value="Dashboard"
                                 onClick={function(){
                                 let _recommend = false;
@@ -19,7 +19,7 @@ export default class Menu extends Component {
                                 this.props.onOpenRecLists(_recommendLists)
                             }.bind(this)}></input>
                         </li>
-                        <li className="margin-right-md">
+                        <li className="margin-right-ssm">
                             <input type="button" value="My profile"
                                 onClick={function(){
                                 let _recommend = false;
@@ -33,7 +33,7 @@ export default class Menu extends Component {
                                 this.props.onOpenRecLists(_recommendLists)
                             }.bind(this)}></input>
                         </li>
-                        <li className="margin-right-md">
+                        <li className="margin-right-ssm">
                         <input type="button" value="All Treatments"
                                 onClick={function(){
                                 let _recommend = false;

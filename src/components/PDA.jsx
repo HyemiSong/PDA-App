@@ -16,21 +16,21 @@ export default class PDA extends Component {
         <div>
             <TimerRoot />
             <ServerRoot />
-            <div>
-                <ModalsRoot />
-            </div>
-            <div className="z-index-zero">
-                <div className="flex">
-                    <div className="c-19 displayNone"><TopLeft/></div>
-                    <div className="c-62"><TopMid/></div>
-                    <div className="c-19 displayNone"><TopRight/></div>
+            <div className="canvas centering-all borderCorners absolute">
+                <div>
+                    <ModalsRoot />
+                </div>
+                <div className="z-index-zero">
+                    <div className="flex">
+                        <div className="c-100"><TopMid/></div>
+                    </div>
+                    <div className="flex">
+                        <div className="c-100"><HealthMetricsRoot/></div>
+                    </div>
                 </div>
                 <div className="flex">
-                    <div className="c-100"><MenuRoot/></div>
-                </div>
-                <div className="flex ">
-                <div className="c-100"><HealthMetricsRoot/></div>
-                </div>
+                        <div className="c-0 z-index-three"><MenuRoot/></div>
+                    </div>
             </div>
         </div>
       )

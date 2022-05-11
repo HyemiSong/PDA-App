@@ -5,7 +5,9 @@ export default class BreathingEx extends Component {
     state = {
         placeholder:this.props.placeholder,
         reports:this.props.reports,
-        newReport:"My feeling is "
+        serverData:this.props.serverData,
+        newReport:"My feeling is ",
+        title:"Breathing Exercise"
     }
     render(){
         return (
@@ -17,10 +19,11 @@ export default class BreathingEx extends Component {
                     this.props.onSubmitReport(newReports);
                 }.bind(this)}>
          
-                <div className='bg-white detailBg title border-bottom'>
+                <div className='bg-white borderCorners-in title border-bottom canvas absolute'>
                     <div className='flex centring-all padding-sm'>
                         <div className='title t-23 t-med'>
-                            Breathing exercise 
+                            {/* {this.state.title} */}
+                            {this.state.serverData.treatment.title}
                         </div>
                     </div>
                     <div className='padding-sm'>
@@ -29,6 +32,7 @@ export default class BreathingEx extends Component {
                                 Follow this instruction!
                             </div>
                             <div>
+                            {/* <img src= {this.state.serverData.treatment.url} alt="" className="breathing padding-top-xxsm centering" onLoad={ */}
                             <img src= {BreathingImg} alt="" className="breathing padding-top-xxsm centering" onLoad={
                                 function(e){
                                     // let _loaded = false;

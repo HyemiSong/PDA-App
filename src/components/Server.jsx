@@ -8,8 +8,9 @@ export default function Server(props){
     (async () => {
       try {
         const response = await fetch('http://localhost:8080/actor', {mode:'cors'});
-        const data = await response.json();
-        console.log({ data })
+        const d = await response.json();
+        const data = d.data
+        console.log(data)
         setData(data);
         props.onServerData(data);
       }
