@@ -2,19 +2,21 @@ import React, { useState, useEffect } from "react";
 import axios from 'axios';
 
 export default function Server(props){
-
-  const makeAPICall = async () => {
-    try {
-      const response = await fetch('http://localhost:8080/actor', {mode:'cors'});
-      const data = await response.json();
-      console.log({ data })
-    }
-    catch (e) {
-      console.log(e)
-    }
-  }
+  const [data, setData] = useState([]);
+  
   useEffect(() => {
-    makeAPICall();
+    (async () => {
+      try {
+        const response = await fetch('http://localhost:8080/actor', {mode:'cors'});
+        const data = await response.json();
+        console.log({ data })
+        setData(data);
+        props.onServerData(data);
+      }
+      catch (e) {
+        console.log(e)
+      }
+    })()
   }, [])
   return (
     <div>
