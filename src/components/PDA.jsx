@@ -1,6 +1,4 @@
-import TopLeft from "../containers/TopLeft";
 import TopMid from "../containers/TopMid";
-import TopRight from "../containers/TopRight";
 
 import MenuRoot from "./MenuRoot";
 import HealthMetricsRoot from "./HealthMetricsRoot";
@@ -14,8 +12,7 @@ export default class PDA extends Component {
     render(){
       return (
         <div>
-            <TimerRoot />
-            <ServerRoot />
+            {/* <TimerRoot /> */}
             <div className="canvas centering-all borderCorners absolute">
                 <div>
                     <ModalsRoot />
@@ -29,9 +26,10 @@ export default class PDA extends Component {
                     </div>
                 </div>
                 <div className="flex">
-                        <div className="c-0 z-index-three"><MenuRoot/></div>
-                    </div>
+                    <div className="c-0 z-index-three"><MenuRoot/></div>
+                </div>
             </div>
+            <ServerRoot />
         </div>
       )
   }

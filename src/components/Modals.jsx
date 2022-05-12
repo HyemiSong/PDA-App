@@ -7,6 +7,7 @@ import RecommendRoot from "./RecommendRoot"
 export default class Modals extends Component {
     Popup(){
         const{ isPopUp } = this.props;
+        console.log(this.props.serverData)
         let manageModal = null;
          if(isPopUp === false){
             manageModal = null;
@@ -34,7 +35,7 @@ export default class Modals extends Component {
             manageModal = <RecommendRoot/>
          }
          return manageModal
-   }
+    }
      Report(){
         const{ isReport } = this.props;
         let manageModal = null;

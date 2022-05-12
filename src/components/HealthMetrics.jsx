@@ -12,7 +12,7 @@ export default class HealthMetrics extends Component {
                         <div className='l-apple-box-multiple'></div>
                     </div>
                     <div className="t-bold t-20 right-0 padding-sm absolute">
-                        75/min
+                       {this.props.serverData.heartRate}/min
                     </div>
                 </div>
                 <div className='flex border-bottom'>
@@ -21,7 +21,7 @@ export default class HealthMetrics extends Component {
                         <div className='l-apple-box-multiple'></div>
                     </div>
                     <div className="t-bold t-20 right-0 padding-sm absolute">
-                        120/80
+                    {this.props.serverData.systolicBP}/{this.props.serverData.diastolicBP}
                     </div>
                 </div>
                 <div className='flex border-bottom'>
@@ -30,7 +30,7 @@ export default class HealthMetrics extends Component {
                         <div className='l-apple-box-multiple'></div>
                     </div>
                     <div className="t-bold t-20 right-0 padding-sm absolute">
-                        7hrs
+                    {this.props.serverData.sleepHours}hrs
                     </div>
                 </div>
             </div>

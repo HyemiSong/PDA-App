@@ -2,7 +2,7 @@ import HealthMetrics from '../components/HealthMetrics';
 import {connect} from 'react-redux';
 function mapReduxStateToReactProps(state){
     return {
-        // number:state.number
+        serverData: state.serverData
     }
 }
 export default connect(mapReduxStateToReactProps)(HealthMetrics);

@@ -7,7 +7,8 @@ function mapReduxStateToReactProps(state){
         isReport: state.isReport,
         placeholder: state.placeholder,
         reports: state.reports,
-        serverData: state.serverData
+        serverData: state.serverData,
+        treatments: state.treatments
     }
 }
 function mapDispatchToProps(dispatch){

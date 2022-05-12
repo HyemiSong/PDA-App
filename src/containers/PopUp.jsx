@@ -3,7 +3,8 @@ import {connect} from 'react-redux';
 function mapReduxStateToReactProps(state){
     return {
         isPopUp: state.isPopUp,
-        isRecommend: state.isRecommend
+        isRecommend: state.isRecommend,
+        serverData: state.serverData
     }
 }
 function mapDispatchToProps(dispatch){
