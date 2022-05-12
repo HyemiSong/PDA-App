@@ -3,17 +3,17 @@ export default class PopUp extends Component {
     state = {
         serverData:this.props.serverData
     }
-    treatmentOn(){
-        let treatOn = this.props.serverData.treatements;
-        let sum
-        
-        if (treatOn == null){
-            sum = null;
-        }else{
-            sum = this.props.serverData.treatment.summary;
-        }
-        return sum
-    }
+    // treatmentOn(){
+    //     let treatOn = this.props.serverData.treatement;
+    //     let sum;
+
+    //     if (treatOn == null){
+    //         sum = null;
+    //     }else{
+    //         sum = this.props.serverData.treatment.summary;
+    //     }
+    //     return sum
+    // }
     render(){
         return (
             <div>
@@ -27,7 +27,8 @@ export default class PopUp extends Component {
                     <div className='padding-sm'>
                         Stress Level is high. 
                         Follow this treatment:&nbsp;
-                        {this.treatmentOn()}
+                        {/* {this.treatmentOn()} */}
+                        {this.props.serverData.treatment.summary}
                     </div>
                         <div className='flex centering padding-md'>
                             <input type="button" value="Learn more" className='margin-right-ssm'

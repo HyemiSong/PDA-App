@@ -7,11 +7,19 @@ import RecommendRoot from "./RecommendRoot"
 export default class Modals extends Component {
     Popup(){
         const{ isPopUp } = this.props;
-        console.log(this.props.serverData)
+        const{ treatmentExists } = this.props.serverData;
+
+        const A = this.props.isPopUp;
+
+        console.log(A);
+        console.log(treatmentExists);
+        console.log("previousStressLevel"+this.props.serverData.previousStressLevel);
+        console.log("currentStressLevel"+this.props.serverData.currentStressLevel);
+
         let manageModal = null;
-         if(isPopUp === false){
+         if(treatmentExists === "no"){
             manageModal = null;
-         }else if(isPopUp === true){
+         }else if(treatmentExists === "yes" ){
             manageModal = <PopUpRoot/>
          }
          return manageModal
